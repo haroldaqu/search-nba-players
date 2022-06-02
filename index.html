@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search NBA Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <article class="page-container">
+        <section class="search-container">
+            <label for="search">Search Player</label>
+            <input type="search" id="search" class="search-input">
+        </section>
+        <section class="player-cards"></section>
+        <template class="card-template">
+            <div class="card hide">
+                <p class="id hide"></p>
+                <img class="player-img" src=""
+                    alt="No Image for this player">
+                <h1 class="player-name"></h1>
+                <button class="view-button">View Stats</button>
+            </div>
+        </template>        
+    </article>
+    <article class="modal-container hide">
+        <div class="modal">
+            <section class="button-container">
+                <button class="close-button">&#10006</button>
+            </section>
+            <section class="player-profile">
+                <img class="profile-img" src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/2544.png" alt="">
+                <div class="profile-content">
+                    <h1 class="profile-name">LeBron James</h1>
+                    <div class="profile-info">
+                        <p class="height">6'8</p>
+                        <p class="weight">250</p>
+                        <p class="position">F</p>
+                        <p>#<span class="draft-position">1</span> Pick in <span class="draft-year">2003</span></p>
+                        <p>School: <span class="school"> St Vincent</span></p>
+                        <p>Country: <span class="country">USA</span></p>
+                    </div>
+                </div>
+            </section>
+            <table class="stats-table">
+
+            </table>
+        </div>
+    </article>
+
+    <script src="index.js"></script>
+</body>
+</html>
