@@ -30,7 +30,7 @@ const getData = (async () => {
 // 2. display data
 const displayData = (players) => {
     const slicePlayers = players.slice(0, 10);
-    playerArray = slicePlayers.map(player => {
+    playerArray = players.map(player => {
         const card = cardTemplate.content.cloneNode(true).children[0];
         const playerImg = card.querySelector('.player-img');
         const playerName =  card.querySelector('.player-name');
@@ -107,7 +107,7 @@ const populateProfile = (profile, id) => {
     profileName.innerText = `${profile.firstName} ${profile.lastName} `
     profileHeight.innerText = `${profile.heightFeet}'${profile.heightInches}`
     profileWeight.innerText = `${profile.weightPounds} Lbs`
-    profilePosition.innerText = profile.pos
+    profilePosition.innerText = `Position: ${profile.pos}`
     draftPosition.innerText = profile.draft.pickNum
     draftYear.innerText = profile.draft.seasonYear
     profileSchool.innerText = profile.collegeName
@@ -126,7 +126,7 @@ const populateStats = (stats) => {
             spg: stat.total.spg,
             ftp: stat.total.ftp,
             fgp: stat.total.fgp,
-            tpp: stat.total.ttp,
+            tpp: stat.total.tpp,
             topg: stat.total.topg,
             mpg: stat.total.mpg
         }
@@ -135,6 +135,7 @@ const populateStats = (stats) => {
     const statHeaders = ['Season', 'PPG', 'APG', 'RPG', 'BPG', 'SPG', 'FT%', 'FG%', '3%', 'TOPG', 'MPG']
 
     let headers = document.createElement('tr')
+    headers.classList.add('.header')
 
     statHeaders.forEach(header => {
         let td = document.createElement('th')
