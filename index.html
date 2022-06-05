@@ -12,42 +12,42 @@
     <nav class="nav-bar">
         <section class="filter-container">
             <img class="logo" src="./imgs/bball-logo4.png" alt="">
-            <div class="all-filters">
+            <!-- <div class="all-filters">
                 <select class="team-select">
                     <option value="0">Teams:</option>
                     <optgroup label="West">
-                        <option value="1">Lakers</option>
-                        <option value="2">SunS</option>
-                        <option value="3">Grizzlies</option>
-                        <option value="4">Warriors</option>
-                        <option value="5">Mavericks</option>
-                        <option value="6">Jazz</option>
-                        <option value="7">Nuggets</option>
-                        <option value="8">Timberwolves</option>
-                        <option value="9">Pelicans</option>
-                        <option value="10">Clippers</option>
-                        <option value="11">Spurs</option>
-                        <option value="12">Kings</option>
-                        <option value="13">Blazers</option>
-                        <option value="14">Thunder</option>
-                        <option value="15">Rockets</option>
+                        <option class="team-filter" value="1">Lakers</option>
+                        <option class="team-filter" value="2">Suns</option>
+                        <option class="team-filter" value="3">Grizzlies</option>
+                        <option class="team-filter" value="4">Warriors</option>
+                        <option class="team-filter" value="5">Mavericks</option>
+                        <option class="team-filter" value="6">Jazz</option>
+                        <option class="team-filter" value="7">Nuggets</option>
+                        <option class="team-filter" value="8">Timberwolves</option>
+                        <option class="team-filter" value="9">Pelicans</option>
+                        <option class="team-filter" value="10">Clippers</option>
+                        <option class="team-filter" value="11">Spurs</option>
+                        <option class="team-filter" value="12">Kings</option>
+                        <option class="team-filter" value="13">Blazers</option>
+                        <option class="team-filter" value="14">Thunder</option>
+                        <option class="team-filter" value="15">Rockets</option>
                     </optgroup>
                     <optgroup label="East">
-                        <option value="16">Heat</option>
-                        <option value="17">Celtics</option>
-                        <option value="18">Bucks</option>
-                        <option value="19">76ers</option>
-                        <option value="20">Raptors</option>
-                        <option value="21">Bulls</option>
-                        <option value="22">Nets</option>
-                        <option value="23">Hawks</option>
-                        <option value="24">Cavaliers</option>
-                        <option value="25">Hornets</option>
-                        <option value="26">Knicks</option>
-                        <option value="27">Wizards</option>
-                        <option value="28">Pacers</option>
-                        <option value="29">Pistons</option>
-                        <option value="30">Magic</option>
+                        <option class="team-filter" value="16">Heat</option>
+                        <option class="team-filter" value="17">Celtics</option>
+                        <option class="team-filter" value="18">Bucks</option>
+                        <option class="team-filter" value="19">76ers</option>
+                        <option class="team-filter" value="20">Raptors</option>
+                        <option class="team-filter" value="21">Bulls</option>
+                        <option class="team-filter" value="22">Nets</option>
+                        <option class="team-filter" value="23">Hawks</option>
+                        <option class="team-filter" value="24">Cavaliers</option>
+                        <option class="team-filter" value="25">Hornets</option>
+                        <option class="team-filter" value="26">Knicks</option>
+                        <option class="team-filter" value="27">Wizards</option>
+                        <option class="team-filter" value="28">Pacers</option>
+                        <option class="team-filter" value="29">Pistons</option>
+                        <option class="team-filter" value="30">Magic</option>
                     </optgroup>
                 </select>
                 <select class="position-select">
@@ -78,10 +78,10 @@
                     <option value="18">2020</option>
                     <option value="19">2021</option>
                 </select>
-            </div>
+            </div> -->
         </section>
         <section class="search-container">
-            <input type="search" id="search" class="search-input" placeholder="Search Player">
+            <input type="search" id="search" class="search-input" placeholder="Search Player by Name or Team">
         </section>
     </nav>
     <article class="page-container">
@@ -92,6 +92,7 @@
                 <img class="player-img" src=""
                     alt="No Image for this player">
                 <h1 class="player-name"></h1>
+                <p class="position-team">Guard-Forward | Lakers</p>
                 <button class="view-button">View Stats</button>
             </div>
         </template>        
@@ -113,6 +114,7 @@
                         <p>School: <span class="school"> St Vincent</span></p>
                         <p>Country: <span class="country">USA</span></p>
                     </div>
+                    <!-- <img class="profile-team-img" src="https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg" alt=""> -->
                 </div>
             </section>
             <div class="table-container">

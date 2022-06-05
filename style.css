@@ -10,10 +10,17 @@ html,
 body {
   height: 100%;
   font-family: "Montserrat", sans-serif;
-  background-color: #4c4177;
-  background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
+  /* background-color: #4c4177;
+  background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%); */
+  /* background-image: url(./imgs/bball-logo.jpg);
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+  background: url(./imgs/bball-logo.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
   /* background-color: #121212;
   background-image: linear-gradient(315deg, #000000 0%, #414141 74%); */
 }
@@ -35,56 +42,6 @@ body {
   height: 40px;
   gap: 5px;
 }
-/* select {
-  background-color: white;
-  border: thin solid blue;
-  border-radius: 4px;
-  display: inline-block;
-  font: inherit;
-  line-height: 1.5em;
-  padding: 0.5em 3.5em 0.5em 1em;
-
-  margin: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-select.classic {
-  background-image: linear-gradient(45deg, transparent 50%, blue 50%),
-    linear-gradient(135deg, blue 50%, transparent 50%),
-    linear-gradient(to right, skyblue, skyblue);
-  background-position: calc(100% - 20px) calc(1em + 2px),
-    calc(100% - 15px) calc(1em + 2px), 100% 0;
-  background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
-  background-repeat: no-repeat;
-}
-
-select.select {
-  background-image: linear-gradient(45deg, transparent 50%, gray 50%),
-    linear-gradient(135deg, gray 50%, transparent 50%),
-    linear-gradient(to right, #ccc, #ccc);
-  background-position: calc(100% - 20px) calc(1em + 2px),
-    calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
-  background-size: 5px 5px, 5px 5px, 1px 1.5em;
-  background-repeat: no-repeat;
-}
-select.select:focus {
-  background-image: linear-gradient(45deg, green 50%, transparent 50%),
-    linear-gradient(135deg, transparent 50%, green 50%),
-    linear-gradient(to right, #ccc, #ccc);
-  background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em,
-    calc(100% - 2.5em) 0.5em;
-  background-size: 5px 5px, 5px 5px, 1px 1.5em;
-  background-repeat: no-repeat;
-  border-color: green;
-  outline: 0;
-}
-select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #000;
-} */
 .logo {
   padding: 10px;
   width: 100px;
@@ -116,29 +73,42 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px 0 10px;
+  padding: 0 10px 0 0;
   margin-bottom: 20px;
   width: 600px;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
     rgba(0, 0, 0, 0.05) 0px 5px 10px;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px); */
   /* background-color: rgba(0, 191, 255, 0.306); */
   /* box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
   border: 0px rgba(255, 255, 255, 0.4) solid; */
-  border-bottom: 0px rgba(40, 40, 40, 0.35) solid;
-  border-right: 0px rgba(40, 40, 40, 0.35) solid;
-  color: white;
+  /* border-bottom: 0px rgba(40, 40, 40, 0.35) solid;
+  border-right: 0px rgba(40, 40, 40, 0.35) solid; */
+  color: black;
+}
+.card:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 1s ease;
 }
 .card > img {
   width: 150px;
   height: auto;
+  padding: 0 10px 0 10px;
 }
 .view-button {
   cursor: pointer;
   border: none;
   background-color: transparent;
-  color: white;
+  color: blue;
 }
 .hide {
   display: none;
@@ -152,6 +122,7 @@ input {
   left: 0;
   height: 100vh;
   width: 100vw;
+  color: black;
 }
 .modal {
   max-height: calc(100vh - 210px);
@@ -159,19 +130,8 @@ input {
   margin: 50px;
   padding: 25px;
   background-color: white;
+  /* border: solid #fdb927; */
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
-    rgba(0, 0, 0, 0.05) 0px 5px 10px;
-  /* backdrop-filter: blur(4px);
-  background-color: rgba(0, 191, 255, 0.306);
-  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
-  border: 0px rgba(255, 255, 255, 0.4) solid;
-  border-bottom: 0px rgba(40, 40, 40, 0.35) solid;
-  border-right: 0px rgba(40, 40, 40, 0.35) solid; */
-  /* background-color: #fcb724; */
-  color: #ffffff;
-  background-image: linear-gradient(315deg, #752f8a 0%, #fcb724 74%);
-  /* background-color: #fcb724; */
 }
 .modal::-webkit-scrollbar {
   display: none;
@@ -185,20 +145,40 @@ input {
   cursor: pointer;
   border: none;
   background-color: transparent;
-  color: #ffffff;
+  color: blue;
 }
 .player-profile {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: solid white;
   margin-bottom: 15px;
   border-radius: 5px;
+  border: solid 2px;
+  /* background-image: url(https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg);
+  background: linear-gradient(rgba(24, 3, 3, 0.9), rgba(255, 255, 255, 0.9)); */
+  /* background-size: 300px 100px, cover; */
+}
+.player-profile > img {
+  /* background-color: #fdb927; */
+  /* border-right: solid purple;
+  border-left: solid purple; */
+}
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 175px;
+  background: rgba(255, 255, 255, 0.5);
 }
 .profile-info {
   display: flex;
   gap: 15px;
 }
+/* .profile-team-img {
+  width: 50px;
+  height: auto;
+} */
 .table-container {
   display: flex;
   justify-content: center;
