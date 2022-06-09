@@ -3,6 +3,7 @@ const playerCards = document.querySelector('.player-cards');
 const searcInput = document.querySelector('.search-input');
 const modalContainer = document.querySelector('.modal-container');
 const closeBtn = document.querySelector('.close-button');
+const profileInfo = document.querySelector('.profile-info')
 const profileImg = document.querySelector('.profile-img');
 const profileName = document.querySelector('.profile-name');
 const profileHeight = document.querySelector('.height');
@@ -12,10 +13,9 @@ const draftPosition = document.querySelector('.draft-position');
 const draftYear = document.querySelector('.draft-year');
 const profileSchool = document.querySelector('.school');
 const profileCountry = document.querySelector('.country');
-const playerProfile = document.querySelector('.player-profile')
-const profileContent = document.querySelector('.profile-content')
-
-const statsTable = document.querySelector('.stats-table')
+const playerProfile = document.querySelector('.player-profile');
+const profileContent = document.querySelector('.profile-content');
+const statsTable = document.querySelector('.stats-table');
 
 let playerArray = [];
 
@@ -226,6 +226,12 @@ const displayData = (players) => {
         const playerPositionTeam =  card.querySelector('.position-team')
         const viewStatsBtn =  card.querySelector('.view-button');
 
+
+        if (player.teamId !== '1610612747') {
+            card.classList.add('hide')
+        }
+     
+        
         playerImg.src = `https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${player.personId}.png`;
         playerName.innerText = `${player.firstName} ${player.lastName} `;
         playerID.innerText = player.personId;
@@ -233,15 +239,18 @@ const displayData = (players) => {
         playerCards.append(card);
         viewStatsBtn.addEventListener('click', (e, player) => grabStatAndProfile(e, player));
 
+        
+
         return { name: `${player.firstName} ${player.lastName}`, teamName: `${teamNames[player.teamId]}`, element: card};
     })   
 };
 
 // 3. Search Players
 const searchPlayers = (e) => {
-    const value = e.target.value.toLowerCase();
+    let value = e.target.value.toLowerCase();
     playerArray.forEach(player => {
         if (value === '') {
+            value = 'lakers'
             player.element.classList.add('hide');
         }
         else {
@@ -250,7 +259,6 @@ const searchPlayers = (e) => {
         }
     })
 };
-
 
 searcInput.addEventListener('input', searchPlayers);
 
@@ -306,6 +314,8 @@ const populateProfile = (profile, id) => {
     profileSchool.innerText = profile.collegeName
     profileCountry.innerText = profile.country
 
+    profileInfo.style.borderBottomColor = allTeamsObj[profile.teamId].secondaryColors
+    profileName.style.borderBottomColor = allTeamsObj[profile.teamId].primaryColors
     playerProfile.style.borderTopColor = allTeamsObj[profile.teamId].primaryColors
     playerProfile.style.borderBottomColor = allTeamsObj[profile.teamId].primaryColors
     playerProfile.style.borderRightColor = allTeamsObj[profile.teamId].secondaryColors
