@@ -133,12 +133,12 @@ input {
     border: none;
   }
 
-  .card:hover {
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
+  /* .card:hover {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
     transition: none;
-  }
+  } */
 
   .player-profile {
     display: flex;
@@ -166,12 +166,12 @@ input {
     overflow-y: hidden;
   }
 }
-.card:hover {
+/* .card:hover {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
   transition: 1s ease;
-}
+} */
 .card > img {
   width: 25%;
   height: auto;
@@ -234,13 +234,16 @@ input {
 .button-container {
   display: flex;
   justify-content: flex-end;
-  padding: 0.5rem;
+  /* padding: 0.25rem; */
 }
 .close-button {
   cursor: pointer;
-  border: none;
-  background-color: transparent;
+  border: solid blue 1px;
+  border-radius: 5px;
+  background-color: white;
   color: blue;
+  position: absolute;
+  padding: 0.25rem;
 }
 
 .player-profile {
