@@ -48,6 +48,7 @@ body {
   width: 100%;
 }
 input {
+  color: white;
   padding: 1rem;
   height: 40px;
   width: 40%;
